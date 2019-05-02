@@ -9,13 +9,25 @@
     <div class="credit">Corinne Chin / The Seattle Times</div>
   {{/image}}
  -->
-  <h2 class="bigheader">{{name}}</h2>
+  <h2 class="emphasis">{{hometown}}</h2>
 
-  <div class="address">{{address}}</div>
+  <div class="address">{{years}} years away</div>
 
-  {{#description}}
-    <div class="descript">{{description}}</div>
-  {{/description}} 
+  {{#display}}
+    <div class="descript">Name: {{display}}</div>
+  {{/display}} 
+
+  {{#photo}}
+    <div><source src="{{photo}}"></div>
+  {{/photo}} 
+
+  {{#frequency}}
+    <div class="descript">Returns home: {{frequency}}</div>
+  {{/frequency}} 
+
+  {{#comment}}
+    <div class="descript">"{{comment}}" -{{display}}</div>
+  {{/comment}} 
 
 <!--   {{#link}}
     <div class="note"><a href="{{link}}" target="_blank"><em>(Source)</em></a></div>

@@ -1,8 +1,9 @@
 .aspect-ratio-outer {
   width: 100%;
   position: relative;
+
   .aspect-ratio-inner {
-    padding-bottom: percentage(6/5);
+    padding-bottom: percentage(8/5);
     position: relative;
     @media @mobile {
       padding-bottom:percentage(5/6);
@@ -24,25 +25,34 @@
   padding-top: 5px;
   .display-flex();
   @media @mobile {
-    .flex-direction(column);
+  //   //.flex-direction(column);
+    display: block;
+    .flex(none);
+    flex: none;
   }
 };
+
 .area1 {
-  .flex(2);
+  .flex(1 1 50%);
   .flex-wrap(row wrap);
-  @media @mobile {
-    .flex(1);
-    .flex-order(2);
-  }
+    .flex-order(2)
 };
+
 .area2 {
-  .flex(1);
+  .flex(1 1 50%);
   .flex-wrap(row wrap);
-  padding: 8px 12px;
+  margin: 0 15px 0 0;
+  @media @tablet {
+  margin: 0;
+  }
   @media @mobile {
-    .flex-order(1);
+  // .flex-order(1);
+  display: block;
+  .flex(none);
+  flex: none;
   }
 };
+
 aside.sidebarlegend {
   position: relative;
   padding: 6px 8px;

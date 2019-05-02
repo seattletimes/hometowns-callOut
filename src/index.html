@@ -21,7 +21,8 @@
         <h1>REFLECTIONS ON HOME:<br>Readers talk about where they grew up and how it shaped them.</h1>
         <p>We asked you to tell us about your hometowns — how long it's been since you moved away, how often you return and what comes to mind when you think about those places. Click on a location for more information on that hometown.</p>
       </section>
-
+      
+    <div class="flex-container">
       <div class=radio-block>
         <input type="radio" name="groups" id="all" checked="checked">
          <label for="all">Any time away from home</label>
@@ -35,28 +36,35 @@
          <label for="g4">2016</label>
      </div>
 
-      <div class="aspect-ratio-outer">
-        <div class="aspect-ratio-inner">
 
-          <leaflet-map zoom=3>
-            <tile-layer layer="cartoPositron"></tile-layer>
-          </leaflet-map>
-
-        </div>
-        <aside class="legend">
-          <h1>Years away from home</h1>
-          <ul class="scale">
-            <li>
-              <span class="block" style="background-color: #00441b"></span> 45 years and up</li>
-            <li>
-              <span class="block" style="background-color: #238b45"></span> 30 - 44 years</li>
-            <li>
-              <span class="block" style="background-color: #74c476"></span> 15 - 29 years</li>
-            <li>
-              <span class="block" style="background-color: #c7e9c0"></span> 0 - 14 years</li>
-          </ul>
-        </aside>
+        <div class="aspect-ratio-outer">
+          <div class="aspect-ratio-inner">
+            <leaflet-map zoom=3>
+              <tile-layer layer="cartoPositron"></tile-layer>
+            </leaflet-map>
+          </div>
+          <aside class="legend">
+            <h1>Years away from home</h1>
+            <ul class="scale">
+              <li>
+                <span class="block" style="background-color: #00441b"></span> 45 years and up</li>
+              <li>
+                <span class="block" style="background-color: #238b45"></span> 30 - 44 years</li>
+              <li>
+                <span class="block" style="background-color: #74c476"></span> 15 - 29 years</li>
+              <li>
+                <span class="block" style="background-color: #c7e9c0"></span> 0 - 14 years</li>
+            </ul>
+          </aside>
+<!--         </div> -->
       </div>
+
+      <div class="area2">
+        <div class="pop-container">
+            <div class="introtext">Select a point on the map for information about each homicide, or select the "Next" button to see them in chronological order.</div>
+        </div>
+      </div>
+    </div>
 
 
       <div class="source">Source: Seattle Times Readers
