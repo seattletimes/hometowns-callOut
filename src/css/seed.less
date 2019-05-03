@@ -1,5 +1,5 @@
 @import "seattletimes";
-@aspect-ratio: 10/10;
+@aspect-ratio: 7/10;
 @legend-length: 5; //number of legend items
 
 .flex-container {
@@ -25,6 +25,9 @@ body {
   max-width: 960px;
   padding-bottom: 0;
   clear: both;
+    @media @mobile {
+    padding: 10px;
+  }
 
 }
 .aspect-ratio-outer {
@@ -34,6 +37,7 @@ body {
   .aspect-ratio-inner {
     padding-bottom: percentage(@aspect-ratio);
     position: relative;
+    width: 100%;
   }
 
   leaflet-map {
@@ -74,9 +78,45 @@ body {
 }
 
 //custom
+.map-area {
+  padding-top: 5px;
+  .display-flex();
+  @media @mobile {
+    display: block;
+    flex: none;
+  }
+}
+
+.pop-container {
+  padding-left: 10px;
+  // .display-flex();
+}
+
+.area1 {
+  .flex(3 1 50%);
+  .flex-wrap(row wrap);
+    .flex-order(1)
+}
+
+.area2 {
+  .flex(2 1 40%);
+  .flex-wrap(row wrap);
+  margin: 0 15px 0 0;
+  .flex-order(2)
+
+  @media @tablet {
+  margin: 0;
+  }
+  @media @mobile {
+  // .flex-order(1);
+  display: block;
+  }
+}
+
 .radio-block {
   .display-flex();
   .flex-direction(column);
+  .flex(1 1 10%);
 
   margin-bottom: 10px;
   padding-right: 10px;
@@ -97,6 +137,10 @@ body {
     background: @df-dark-gray;
     color: white;
   }
+  @media @mobile {
+    padding: 0px;
+  }
+
 }
 
 .groups-marker {

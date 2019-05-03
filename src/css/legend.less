@@ -1,42 +1,42 @@
 aside.legend {
-  position: absolute;
+  position: relative;
   bottom: 10px;
-  left: 10px;
+  // left: 10px;
   padding: 6px 8px;
   font-size: 12px;
   font-family: sans-serif;
-  background: white;
-  background: rgba(255,255,255,0.8);
+  // background: white;
+  // background: rgba(255,255,255,0.8);
   border-radius: 5px;
-  @media @tablet {
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-  }
+  width: 100%;
+
   h1 {
     margin: 0;
-    padding: 5px 5px 5px 0;
+    padding: 10px 0px 0px 0;
     text-align: left;
     font-size: 14px;
     text-transform: uppercase;
     line-height: 1.5;
   }
   ul.scale {
-    padding: 0;
+    padding: 5px 0px;
     margin: 0;
     list-style-type: none;
     overflow: auto;
     padding-bottom: 8px;
+
     li {
       line-height: 18px;
       margin-bottom: 2px;
-      @media @tablet {
-        float: left;
-        text-align: center;
-        width: 100% / @legend-length;
+      float: left;
+      text-align: center;
+      width: 100% / @legend-length;
+      @media @mobile {
+        font-size: 11px;
+        line-height: 14px;
       }
     }
+
     .block {
       width: 14px;
       height: 14px;
