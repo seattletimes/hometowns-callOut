@@ -1,0 +1,24 @@
+<div class="tooltip">
+  <div class="county"> <%= data.county.replace("_", " ") %> County</div>
+  <div class="outer">
+       <% var allYears = []; %>
+       <% if (data.emissionValue == 4.5) var scenario = "moderate"; %>
+       <% if (data.emissionValue == 8.5) var scenario = "high"; %>
+     <% data.rows.forEach(function(row) { %>
+       <% allYears.push(row.p50); %>
+       <% if (row.period != data.period.toString()) return; %>
+       <% if (row.period == data.period.toString()) var percentile = row.p50.toFixed(1); %>
+       <% console.log(percentile); %>
+
+
+
+     <div class="text">
+       There were an average of <strong><%= allYears[0].toFixed(1) %></strong> days per year above 95&deg;F in <%= data.county.replace("_", " ") %> County from 1981-2010.
+       <% if (data.period != "1981-2010") { %>
+         Under the <%= scenario %> scenario, temperatures will rise above 95&deg;F <strong><%= percentile %></strong> days out of the year during this period. 
+       <% } %>
+     </div>
+    <% console.log(allYears); %>
+    <% }); %>
+  </div>
+</div>

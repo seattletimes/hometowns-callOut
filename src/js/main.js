@@ -15,8 +15,9 @@ var onEachFeature = function(feature, layer) {
 	layer.bindPopup(ich.popup(feature.properties))
 };
 
-var data = require("./hometowns.geo.json");
+var data = require("./hometown.geo.json");
 var all = "groups";
+var s = "info"
 
 var getColor = function(d) {
     var value = d[all];
@@ -34,7 +35,7 @@ var getColor = function(d) {
   };
 
 function getStroke(s) {
- return s == "OIS" ? 2 : .2
+ return s == "INFO" ? 2 : .2
 }
 
 function geojsonMarkerOptions(feature) {
@@ -45,7 +46,7 @@ function geojsonMarkerOptions(feature) {
     className: "leaflet-clickable groups-marker " + feature.properties.groups,
     fillColor: getColor(feature.properties),
     color: "#000000",
-    weight: getStroke(feature.properties.type),
+    weight: getStroke(feature.properties.info),
     opacity: 1,
     fillOpacity: 0.5,
   }
@@ -59,6 +60,8 @@ var geojson = L.geoJson(data, {
     style: geojsonMarkerOptions,
     onEachFeature: onEachFeature
 }).addTo(map);
+
+
 
 var controls = document.querySelector(".radio-block");
 
