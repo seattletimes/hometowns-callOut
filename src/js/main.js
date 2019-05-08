@@ -54,7 +54,7 @@ function getStroke(s) {
 }
 
 function geojsonMarkerOptions(feature) {
-	console.log(feature.properties.groups)
+	console.log(feature.properties.photo)
 
   return {
     radius: 6,

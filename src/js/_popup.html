@@ -20,8 +20,12 @@
   {{/display}} 
 
   {{#photo}}
-    <div><source src="{{photo}}"></div>
+    <img src="{{photo}}" class="photo">
   {{/photo}} 
+
+<!--   <% if (data.location.photo_url) { %>
+  <img src="<%= data.location.photo_url %>" class="photo">
+  <% } %> -->
 
   {{#frequency}}
     <div class="descript">Returns home: {{frequency}}</div>
