@@ -94,3 +94,4 @@ var onEachFeature = function(feature, layer) {
 };
 
 map.scrollWheelZoom.disable();
+map.setView([48, -80], 2);

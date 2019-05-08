@@ -15,25 +15,23 @@
 
   <div class="address">{{years}} years away</div>
 
-  {{#display}}
-    <div class="descript">Name: {{display}}</div>
-  {{/display}} 
-
   {{#photo}}
     <img src="{{photo}}" class="photo">
   {{/photo}} 
 
-<!--   <% if (data.location.photo_url) { %>
-  <img src="<%= data.location.photo_url %>" class="photo">
-  <% } %> -->
+  {{#display}}
+    <div class="descript">Name: {{display}}</div>
+  {{/display}} 
 
   {{#frequency}}
     <div class="descript">Returns home: {{frequency}}</div>
   {{/frequency}} 
 
   {{#comment}}
-    <div class="descript">"{{comment}}" -{{display}}</div>
+    <div class="descript">"{{comment}}" <i>{{display}}</i></div>
   {{/comment}} 
+
+  <div class="note"><i>Click on another location on the map for additional information.</i></div>
 
 <!--   {{#link}}
     <div class="note"><a href="{{link}}" target="_blank"><em>(Source)</em></a></div>
