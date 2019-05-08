@@ -11,13 +11,28 @@ var ich = require("icanhaz");
 var templateFile = require("./_popup.html");
 ich.addTemplate("popup", templateFile);
 
-var onEachFeature = function(feature, layer) {
-	layer.bindPopup(ich.popup(feature.properties))
-};
-
+// var onEachFeature = function(feature, layer) {
+// 	layer.bindPopup(ich.popup(feature.properties))
+// };
+var $ = require("jquery");
 var data = require("./hometown.geo.json");
 var all = "groups";
 var s = "info"
+var currentItem = null;
+
+var onEachFeature = function(feature, layer) {
+  feature.layer = layer;
+  layer.on('click', function(e) {
+    currentItem = feature;
+    var container = $(".pop-container");
+    container.html(ich.popup(feature.properties));
+    $(".close").click(function() {
+      container.html("");
+    });
+  });
+};
+
+map.scrollWheelZoom.disable();
 
 var getColor = function(d) {
     var value = d[all];
