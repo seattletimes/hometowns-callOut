@@ -7,7 +7,7 @@
   max-height: 600px;
 
   @media @tablet {
-    display: inline-block;
+    display: block;
   }
 }
 
@@ -27,6 +27,10 @@ body {
   max-width: 960px;
   padding-bottom: 0;
   clear: both;
+
+  @media @tablet {
+    display: inline-block;
+  }
   @media @mobile {
     padding: 10px;
   }
@@ -84,21 +88,23 @@ body {
 .map-area {
   padding-top: 5px;
   .display-flex();
-  @media @mobile {
+  @media @tablet {
     display: block;
     flex: none;
   }
 }
 
 .pop-container {
+  display: block;
   padding-left: 10px;
+  max-height: 630px;
 
   .introtext {
     font-size: 18px;
     text-align: center;
     font-weight: bold;
-
   }
+
     img {
     margin: auto;
     display: block;
@@ -110,12 +116,14 @@ body {
   }
 }
 
-
-
 .area1 {
   .flex(3 1 60%);
   .flex-wrap(row wrap);
     .flex-order(1)
+
+  // @media @tablet {
+  //   display: block;
+  // }
 }
 
 .area2 {
@@ -123,6 +131,10 @@ body {
   .flex-wrap(row wrap);
   .flex-order(2);
   margin: 0 15 0 0px;
+
+  // @media @tablet {
+  //   display: block;
+  // }
 
   @media @mobile {
   padding-bottom: 20px;

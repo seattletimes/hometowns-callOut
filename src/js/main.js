@@ -15,7 +15,7 @@ ich.addTemplate("popup", templateFile);
 // 	layer.bindPopup(ich.popup(feature.properties))
 // };
 var $ = require("jquery");
-var data = require("./hometown.geo.json");
+var data = require("./hometown2.geo.json");
 var all = "groups";
 var s = "info"
 var currentItem = null;
