@@ -5,9 +5,10 @@
 .flex-container {
   .display-flex();
   max-height: 600px;
+  width: 100%;
 
   @media @tablet {
-    display: block;
+    display: inline-block;
   }
 }
 
@@ -28,9 +29,6 @@ body {
   padding-bottom: 0;
   clear: both;
 
-  @media @tablet {
-    display: inline-block;
-  }
   @media @mobile {
     padding: 10px;
   }
@@ -60,6 +58,7 @@ body {
 }
 .map-container {
   position: relative;
+  display: block;
 
 }
 .bigheader {
@@ -98,6 +97,12 @@ body {
   display: block;
   padding-left: 10px;
   max-height: 630px;
+
+  @media @tablet {
+    border-top: 2px solid @df-border-gray;
+    padding-top: 10px;
+  }
+
 
   .introtext {
     font-size: 18px;
