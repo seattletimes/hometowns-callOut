@@ -5,8 +5,8 @@
       "path": "ablative-advantage"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2019/features/hometown-reflections"
     }
   },
   "title": "",
